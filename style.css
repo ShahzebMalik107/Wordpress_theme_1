@@ -1,0 +1,194 @@
+/*
+Theme Name: Shahzeb Malik
+Author: Shahzeb Malik
+*/
+
+
+
+:root
+{
+    --primary-color: #101820;
+    --secondary-color: #FEE715;
+    --text-color: black;
+}
+/* Universal button */
+.button
+{
+    background-color: var(--secondary-color);
+    padding: 10px 20px ;
+    border: solid 2px var(--primary-color);
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: .5s;
+
+}
+.button a 
+{
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.button:hover
+{
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+}
+.button:hover a
+{
+    color: var(--secondary-color);
+}
+/* Fonts  */
+/* Headings Lobster */
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Lobster', cursive;
+}
+
+/* Paragraph  */
+p,a
+{
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.container
+{
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+/* Header */
+/* Top header */
+.top-head
+{
+    background-color: var(--secondary-color);
+    height: 25px;
+}
+.top-header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.top-left,.top-right
+{
+    display: flex;
+    color: var(--primary-color);
+    font-size: 16x;
+}
+.top-left i,.top-right i
+{
+    color: var(--primary-color);
+    padding-right: 10px;
+}
+
+/* Bottom header */
+header
+{
+ background-color: var(--primary-color);   
+ height: 75px;
+ display: flex;
+}
+.headerv1
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+/* **** */
+/* Logo */
+/* **** */
+.custom-logo {
+    height: 50px;
+    width: 400px;
+    object-fit: contain;
+    object-position: left;
+}
+
+/* **** */
+/* END  */
+/* **** */
+
+
+/* **** */
+/* menu */
+/* **** */
+.menu
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.menu-item
+{
+    list-style: none;
+    padding: 0 5px;
+    overflow: hidden;
+}
+.menu-item a
+{
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: .5s;
+}
+.menu-item a:hover
+{
+    color: ghostwhite;
+}
+
+.menu-item a::before
+{
+    content: "";
+    border: solid var(--secondary-color) 2px;
+    position: absolute;
+    display:inline-block;
+    width: 2%;
+    transform: translateY(40px);
+    transition: .5s;
+    visibility: hidden;
+}
+.menu-item a:hover::before
+{
+    transform: translateY(20px);
+    visibility: visible;
+    border-color: ghostwhite;
+} 
+
+/* **** */
+/* END  */
+/* **** */
+
+
+/* Archive Page v1 */
+.archive-image
+{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+.archive-body
+{
+    background-image: url("assets/background-images/light_wool.png");
+    padding: 40px 0px;
+}
+.Archive_card
+{
+    box-shadow:  5px 4px 5px #aaaaaa52;
+    border-radius: 20px;
+    display: flex;
+    background-color: #fff;
+    padding: 50px;
+    margin: 50px auto;
+    align-items: center;
+}
+.archive-content
+{
+    margin-left: 50px;
+}
+
