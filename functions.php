@@ -56,34 +56,15 @@ function google_fonts() {
 }
 add_action( 'wp_enqueue_scripts', 'google_fonts' );
 
-// Adding firstwidget
+//adding widgets
 
-function custom_widgets()
-{
-    register_sidebar( 
-        array(
-            'name'               => esc_html__( 'Top Bar-left','customtheme' ),
-            'id'                 => 'top-left',
-            'description'        => esc_html__( 'Add contact info and location hare' ),
-            'before_widget'      => '<section class="top-left">',
-            'after_widget'       =>'</section>',
-            'before_title'       =>'<h4>',
-            'after_title'        => '</h4>',
-        )
-        
-    );
 
-    register_sidebar( 
-        array(
-            'name'               => esc_html__( 'Top Bar-right','customtheme' ),
-            'id'                 => 'top-right',
-            'description'        => esc_html__( 'Add contact info and location hare' ),
-            'before_widget'      => '<section class="top-right">',
-            'after_widget'       =>'</section>',
-            'before_title'       =>'<h4>',
-            'after_title'        => '</h4>',
-        )
-        
-    );
-}
-add_action( 'widgets_init', 'custom_widgets' );
+require_once('template-parts/widget-settings/basicWidgets.php');
+
+
+// Custom objects in customizer
+
+// require get_stylesheet_directory(  ). '/template-parts/widget-settings/setting1.php';
+// new customizertheme1();
+
+require_once('template-parts/widget-settings/header-section.php');
