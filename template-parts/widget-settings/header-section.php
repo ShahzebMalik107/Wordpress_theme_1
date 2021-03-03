@@ -12,7 +12,7 @@ function RegisterCustomizer( $wp_customize )
     //Add settings 
     $wp_customize->add_setting('top_bar-settings',
         array(
-            'default' => 'this is location section',
+            'default' => 'info@email.com',
             'capibilty' => 'edit_theme_option',
             'type'  =>'option',
 
@@ -22,7 +22,7 @@ function RegisterCustomizer( $wp_customize )
     //Add controller
     $wp_customize-> add_control('top_bar_cocntrol',
         array(
-            'label' => __('Enter your Phone Number', 'custom-theme'),
+            'label' => __('Enter your Email address', 'custom-theme'),
             'section'   => 'top-bar',
             'settings'=>  'top_bar-settings',
         )
@@ -45,7 +45,7 @@ function RegisterCustomizer( $wp_customize )
             'settings' => 'Location_section',
         )
     );
-
+    
 }
 
 add_action( 'customize_register', 'RegisterCustomizer' );

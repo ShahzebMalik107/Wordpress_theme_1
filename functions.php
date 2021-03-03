@@ -21,7 +21,8 @@ add_theme_support( 'custom-logo' );
 register_nav_menus(
     array(
         'primary' => __( 'Top menu', 'theme' ),
-        'footer'  => __( 'Secondary menu', 'theme' ),
+        'footer'  => __( 'Footer menu', 'theme' ),
+        'social_media'  => __( 'Social media', 'theme' ),
     )
 );
 
@@ -68,3 +69,6 @@ require_once('template-parts/widget-settings/basicWidgets.php');
 // new customizertheme1();
 
 require_once('template-parts/widget-settings/header-section.php');
+require_once('template-parts/widget-settings/footer-section.php');
+require_once('template-parts/widget-settings/homepage-settings.php');
+

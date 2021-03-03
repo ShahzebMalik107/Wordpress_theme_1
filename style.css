@@ -67,6 +67,7 @@ p,a
 {
     position: sticky;
     top: 0;
+    z-index: 1;
 }
 /* Top header */
 .top-head
@@ -147,12 +148,12 @@ header
     color: var(--secondary-color);
     transition: .5s;
 }
-.menu-item a:hover
+#menu-main_menu a:hover
 {
     color: ghostwhite;
 }
 
-.menu-item a::before
+#menu-main_menu a::before
 {
     content: "";
     border: solid var(--secondary-color) 2px;
@@ -164,7 +165,7 @@ header
     visibility: hidden;
     opacity: 0;
 }
-.menu-item a:hover::before
+#menu-main_menu a:hover::before
 {
     transform: translateY(20px);
     visibility: visible;
@@ -213,28 +214,25 @@ header
 .frow
 {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     padding: 25px 0;
 }
 
 .footerlogo
 {
-    max-width: 25%;
+    max-width: 100%;
     width: 100%;
+    text-align: center;
 }
-.about-section-footer .footer-title
-{
-    color: var(--secondary-color);
+.footerlogo img {
+    object-position: center;
 }
-.about-section-footer p
+.footer-nav
 {
-    color: #fff;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    overflow: hidden;
-    -webkit-box-orient: vertical; 
+    margin: 20px 0px;
 }
 .footer-nav .menu ul li
 {
@@ -249,4 +247,174 @@ header
 .footer-nav .menu ul li a:hover
 {
     color: ghostwhite;
+}
+.copyright-section
+{
+    background-color: var(--secondary-color);
+    padding: 10px 0px;
+    text-align: center;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.copyright-section a
+{
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: .5s;
+}
+
+.copyright-section a:hover
+{
+    color: gray;
+}
+
+
+/*Social media menu*/
+#menu-social-media li
+{
+    margin: 20px 0px;
+}
+#menu-social-media li a 
+{
+    color: var(--primary-color);
+}
+#menu-social-media li
+{
+    padding: 10px 15px;
+    margin: 20px 10px;
+    background-color: var(--secondary-color);
+    border: solid 2px var(--primary-color);
+    border-radius: 8px;
+}
+#menu-social-media li:hover
+{
+    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+}
+#menu-social-media li:hover a
+{
+    color: var(--secondary-color);
+}
+
+/*********** */
+/* Home Page */
+/*********** */
+.homepage_banner
+{
+    height: 400px;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fullname
+{
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.designation
+{
+    margin: 10px;
+}
+
+hr
+{
+    color: var(--secondary-color);
+    margin: 5px auto;;
+}
+
+/* About Section */
+
+.about
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.about_image
+{
+    height: 500px;
+    overflow: hidden;
+    width: 500px;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.about_text
+{
+    width: 50%;
+}
+
+/* Table view */
+@media only screen and (max-width: 1024px)
+{
+    .about_image_main
+    {
+        width: 400px;
+    }
+}
+/* Mobile screen */
+@media only screen and (max-width: 768px)
+{
+    /* Top bar */
+    .top-header
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .top-head
+    {
+        height: auto;
+    }
+    .logo
+    {
+        width: 100%;
+    }
+    .custom-logo-link {
+        width: 100%;
+        display: block;
+        text-align: center;
+    }
+    .custom-logo
+    {
+        width: auto;
+    }
+    .navmenu
+    {
+        width: 100%;
+    }
+    /* menu to center */
+    #menu-main_menu,#menu-social-media
+    {
+        justify-content: center;
+    }
+    .homepage_banner
+    {
+        height: 350px;
+    }
+
+    /*Social media icons */
+    #menu-social-media li
+    {
+        margin: auto;
+    }
+    
+    /* about section */
+
+    .about
+    {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .about_image_main
+    {
+        width: 100%;
+    }
+    .about_text
+    {
+        width: 95%;
+    }
 }
