@@ -115,7 +115,7 @@ function homepage( $wp_customize)
     );
     $wp_customize -> add_setting(
         'html-section', array(
-            'Default'=>6,
+            'Default'=>'6',
             'capibility'=> 'edit_theme_option',
             'type'=> 'option',
         )
@@ -127,7 +127,85 @@ function homepage( $wp_customize)
             'settings' => 'html-section',   
         )
     );
+    
+    // Bootstrap
+    $wp_customize -> add_setting(
+        'Bootstrap-section', array(
+            'Default'=>'6',
+            'capibility'=> 'edit_theme_option',
+            'type'=> 'option',
+        )
+    );
+    $wp_customize-> add_control(
+        'bootsrtap_section_control', array(
+            'label' => __('Your Bootstrap skills Level(range form 0 to 10)'),
+            'section' => 'Skill_section',
+            'settings' => 'Bootstrap-section',   
+        )
+    );
+    
+    // Javascript
+    $wp_customize -> add_setting(
+        'javascript-section', array(
+            'Default'=>'8',
+            'capibility'=> 'edit_theme_option',
+            'type'=> 'option',
+        )
+    );
+    $wp_customize-> add_control(
+        'javascript_section_control', array(
+            'label' => __('Your javascript skills Level(range form 0 to 10)'),
+            'section' => 'Skill_section',
+            'settings' => 'javascript-section',   
+        )
+    );
+    
+    // Wordpress
+    $wp_customize -> add_setting(
+        'wordpress-section', array(
+            'Default'=>'8',
+            'capibility'=> 'edit_theme_option',
+            'type'=> 'option',
+        )
+    );
+    $wp_customize-> add_control(
+        'wordpress_section_control', array(
+            'label' => __('Your wordpress skills Level(range form 0 to 10)'),
+            'section' => 'Skill_section',
+            'settings' => 'wordpress-section',   
+        )
+    );
 
+    // Photoshop
+    $wp_customize -> add_setting(
+        'photoshop-section', array(
+            'Default'=>'8',
+            'capibility'=> 'edit_theme_option',
+            'type'=> 'option',
+        )
+    );
+    $wp_customize-> add_control(
+        'photoshop_section_control', array(
+            'label' => __('Your photoshop skills Level(range form 0 to 10)'),
+            'section' => 'Skill_section',
+            'settings' => 'photoshop-section',   
+        )
+    );
+        // Illustrator
+    $wp_customize -> add_setting(
+        'Illustrator-section', array(
+            'Default'=>'8',
+            'capibility'=> 'edit_theme_option',
+            'type'=> 'option',
+        )
+    );
+    $wp_customize-> add_control(
+        'Illustrator_section_control', array(
+            'label' => __('Your Illustrator skills Level(range form 0 to 10)'),
+            'section' => 'Skill_section',
+            'settings' => 'Illustrator-section',   
+        )
+    );
 }
 
 

@@ -8,10 +8,11 @@ function AllCSS()
     wp_register_style( 'stylesheet', get_template_directory_uri() .'/css/main.css',array(), false,'all');
     wp_enqueue_style( 'stylesheet' );
     wp_register_style( 'main-css', get_template_directory_uri() .'/style.css',array(), false,'all');
-    \wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
+    wp_enqueue_style( 'load-fa', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' );
     wp_enqueue_style( 'main-css' );
 }
 add_action( 'wp_enqueue_scripts' , 'AllCSS');
+
 
 
 //Menu 
@@ -72,3 +73,25 @@ require_once('template-parts/widget-settings/header-section.php');
 require_once('template-parts/widget-settings/footer-section.php');
 require_once('template-parts/widget-settings/homepage-settings.php');
 
+// My work posttype
+
+function create_posttype() {
+ 
+    register_post_type( 'work',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Works' ),
+                'singular_name' => __( 'work' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'has_thumbnail'=> true,
+            'rewrite' => array('slug' => 'work'),
+            'show_in_rest' => true,
+ 
+        )
+    );
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );

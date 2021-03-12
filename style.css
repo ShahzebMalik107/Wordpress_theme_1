@@ -3,7 +3,19 @@ Theme Name: Shahzeb Malik
 Author: Shahzeb Malik
 */
 
-
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+  }
 
 :root
 {
@@ -348,6 +360,50 @@ hr
     width: 50%;
 }
 
+/* Skill section */
+.skill_section
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+.discriptionwordpress {
+    position: absolute;
+    z-index: 1;
+    background: var(--primary-color);
+    width: 33%;
+    padding: 20px;
+    transform: translateY(-100%);
+    transition: .5s;
+    opacity: 0;
+}
+.wordpress
+{
+    cursor: pointer;
+}
+.discriptionwordpress p
+{
+    color: #fff;
+}
+.show{
+opacity: 1;
+transform: translateY(0);
+}
+.flex
+{
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.skill_section-2
+{
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
 /* Table view */
 @media only screen and (max-width: 1024px)
 {
@@ -417,4 +473,25 @@ hr
     {
         width: 95%;
     }
+}
+
+/* Skils main */
+.skill_main
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px auto;
+}
+.skill_main .item
+{
+    padding: 20px;
+    width: 100%;
+    flex-basis: 40%;
+    flex-direction: column;
+}
+.skill_main .item progress
+{
+    width: 100%;
+    background-color: var(--primary-color);
 }
